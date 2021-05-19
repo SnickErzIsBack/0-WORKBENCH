@@ -37,3 +37,5 @@ switch (true) {
         console.log("Hier, Ihr Wein, " + nameDrinker + "!");
         break;      
 }
+
+// ELSE-IF part was not written
