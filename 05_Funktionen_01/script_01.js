@@ -51,9 +51,31 @@ function ausgabeNamaeParam(firstNamae) //Paramater
             }
     }
 
-//ausgabeNamae1Param("Frank"); //call + Argument(e)
-//ausgabeNamae1Param(); //call + Argument(e)
-//prompt("Geben Sie bitte jetzt Ihren Namen ein: ")
-
-ausgabeNamaeParam(prompt("Geben Sie bitte jetzt Ihren Namen ein: "));
+// ausgabeNamae1Param("Frank"); //call + Argument(e)
+// ausgabeNamae1Param("Dirk");
+// ausgabeNamae1Param(); 
+// ausgabeNamaeParam(prompt("Geben Sie bitte jetzt Ihren Namen ein: "));
 //#endregion
+
+/***** Funktionen 02c *****/
+//2.b Mehrere Parameter
+
+/*      //wenn firstNamae leer, dann "Fremder"
+        if (firstNamae == undefined || firstNamae =="")
+            {
+                console.log("Hallo, Fremder!")
+            }
+        else
+            {
+                console.log("Hallo, " + firstNamae +"!");
+            }
+ */
+
+function ausgabeNamaeParams(firstNamae,familyNamae) //Paramater
+    {
+        console.log("Hallo, " + firstNamae + " " + familyNamae + "!");
+    }
+
+//ausgabeNamaeParams("Dirk","Frank");
+//ausgabeNamaeParams(firstNamae,familyNamae);
+ausgabeNamaeParams(prompt("Bitte Vornamen eingeben:"),prompt("Bitte Nachnamen eingeben:"));  
