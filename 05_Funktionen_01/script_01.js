@@ -58,7 +58,19 @@ function ausgabeNamaeParam(firstNamae) //Paramater
 //#endregion
 
 /***** Funktionen 02c *****/
-//2.b Mehrere Parameter
+//#region 2.c Mehrere Parameter
+
+/*
+function ausgabeNamaeParams(firstNamae,familyNamae) //Paramater
+    {
+        console.log("Hallo, " + firstNamae + " " + familyNamae + "!");
+    }
+
+//ausgabeNamaeParams("Dirk","Frank");
+//ausgabeNamaeParams(firstNamae,familyNamae);
+ausgabeNamaeParams(prompt("Bitte Vornamen eingeben:"),prompt("Bitte Nachnamen eingeben:"));
+*/
+//#endregion
 
 /*      //wenn firstNamae leer, dann "Fremder"
         if (firstNamae == undefined || firstNamae =="")
@@ -71,11 +83,22 @@ function ausgabeNamaeParam(firstNamae) //Paramater
             }
  */
 
-function ausgabeNamaeParams(firstNamae,familyNamae) //Paramater
-    {
-        console.log("Hallo, " + firstNamae + " " + familyNamae + "!");
-    }
+/***** Funktionen 03a *****/
+//#region // 03a. Vorbereitung //Postulat: one function = one job (Uncle Bob)
+// SRP = Single Responsibility Principle
+            
+/*    function ausgabeNamaeParams2(firstNamae,familyNamae) //Paramater
+        {
+            // 1st job: string composing
+            let gap = " ";
+            let outputStr = "Hallo, " + firstNamae + gap + familyNamae + "!"
+            
+            // 2nd job: output
+            console.log(outputStr);
+        }
+    
+    ausgabeNamaeParams2(prompt("Bitte Vornamen eingeben:"),prompt("Bitte Nachnamen eingeben:"));
+*/
+//#endregion
 
-//ausgabeNamaeParams("Dirk","Frank");
-//ausgabeNamaeParams(firstNamae,familyNamae);
-ausgabeNamaeParams(prompt("Bitte Vornamen eingeben:"),prompt("Bitte Nachnamen eingeben:"));  
+/***** Funktionen 03b *****/
