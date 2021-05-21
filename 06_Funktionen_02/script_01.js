@@ -2,29 +2,43 @@
 /*** Rechner */
 /*
 0. a+b / a-b/ a*b / a/b  // ergebnis c
-1. a Dateneingabe
+1. a Dateneingabe :: DONE
 1. b Datenüberprüfung :: DONE 
 2. Auswahl Rechenart :: DONE
 3. Fkt. Grundrechenarten :: DONE
 4. Ausgabe in Konsole :: DONE
 */
 
-//ausgabe(rechner(getOp(),10,4));
+start()
 
-// Modul: Operand eingeben | Test:
-ausgabe(getOp());
-
-function getOp() {
-
-    let op = prompt("Please enter [ + | - | * | / ]") // return "+"; | 1.Test
-    
-    while (!isOpValid(op)) { //wrong Input
-        op = prompt("Please enter correct operator")
-    }
-    
-    return op;
+function start() {
+    ausgabe(rechner(getZahl("1"),getOp(),getZahl("2"))); 
 }
 
+//#region // Modul: Zahl1 eingeben | Test:
+//ausgabe(getZahl("1"));
+//ausgabe(getZahl("2"));
+
+function getZahl(numStr) {
+    let zahl  = parseInt(prompt("please enter operand " + numStr))
+    while (isNaN(zahl)) {
+        zahl = parseInt(prompt("not a number, please reenter"));
+    }
+    return zahl; 
+}
+//#endregion
+
+//#region // Modul: Operand eingeben | Test:
+//ausgabe(getOp());
+
+function getOp() {
+    let op = prompt("Please enter [ + | - | * | / ]") // return "+"; | 1.Test
+     while (!isOpValid(op)) { //wrong Input
+        op = prompt("please enter correct operator")
+    }
+    return op;
+}
+//#endregion
 
 //#region // Modul: Operand überprüfen | Test:
 
@@ -62,7 +76,7 @@ function isOpValid(op) {
 // ausgabe (rechner("lkjkj",10,0));
 // ausgabe (rechner("lkjkj"));
 
-function rechner(op,a,b)
+function rechner(a,op,b)
 {
     switch (op)
     {
@@ -80,7 +94,7 @@ function rechner(op,a,b)
 }
 //#endregion
 
-//#region // Modul Adddition a+b | Test:
+//#region // Modul: Adddition a+b | Test:
 
 //ausgabe("ergebnis: " + addieren(a,b)); // | Funktions-Test
 function addieren(a,b){
@@ -88,7 +102,7 @@ function addieren(a,b){
 }
 //#endregion
 
-//#region // Modul Subtraktion a+b | Test:
+//#region // Modul: Subtraktion a+b | Test:
 
 //ausgabe("ergebnis: " + subtrahieren(a,b)); // | Funktions-Test
 function subtrahieren(a,b){
@@ -96,7 +110,7 @@ function subtrahieren(a,b){
 }
 //#endregion
 
-//#region // Modul Multiplikation a*b | Test:
+//#region // Modul: Multiplikation a*b | Test:
 
 //ausgabe("ergebnis: " + multiplizieren(a,b)); // | Funktions-Test
 function multiplizieren(a,b){
@@ -104,7 +118,7 @@ function multiplizieren(a,b){
 }
 //#endregion
 
-//#region // Modul Division a/b | Test:
+//#region // Modul: Division a/b | Test:
 
 //ausgabe("ergebnis: " + dividieren(a,b)); // | Funktions-Test
 function dividieren(a,b){
