@@ -102,7 +102,7 @@ function addieren(a,b){
 }
 //#endregion
 
-//#region // Modul: Subtraktion a+b | Test:
+//#region // Modul: Subtraktion a-b | Test:
 
 //ausgabe("ergebnis: " + subtrahieren(a,b)); // | Funktions-Test
 function subtrahieren(a,b){
