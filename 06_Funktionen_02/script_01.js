@@ -12,28 +12,29 @@
 //ausgabe(rechner(getOp(),10,4));
 
 // Modul: Operand eingeben | Test:
-//ausgabe(getOp());
+ausgabe(getOp());
 
-/*function getOp() {
-    let op = prompt("Bitte [+ | - | * | / ] eingeben") // return "+"; | 1.Test
-        if (isOpValid(op)) {
-            return op ;    
-        } else {
-            return "Bitte nochmal!"
-        }
+function getOp() {
+
+    let op = prompt("Please enter [ + | - | * | / ]") // return "+"; | 1.Test
     
+    while (!isOpValid(op)) { //wrong Input
+        op = prompt("Please enter correct operator")
+    }
+    
+    return op;
 }
 
-*/
 
-// Modul: Operand überprüfen | Test:
-ausgabe(isOpValid("+"));
-ausgabe(isOpValid("-"));
-ausgabe(isOpValid("*"));
-ausgabe(isOpValid("/"));
-ausgabe(isOpValid("#"));
-ausgabe(isOpValid(" "));
-ausgabe(isOpValid(""));
+//#region // Modul: Operand überprüfen | Test:
+
+// ausgabe(isOpValid("+"));
+// ausgabe(isOpValid("-"));
+// ausgabe(isOpValid("*"));
+// ausgabe(isOpValid("/"));
+// ausgabe(isOpValid("#"));
+// ausgabe(isOpValid(" "));
+// ausgabe(isOpValid(""));
 
 function isOpValid(op) {
     /*
@@ -49,6 +50,7 @@ function isOpValid(op) {
     */
    return op == "+" || op == "-" || op == "*" || op == "/";
 }
+//#endregion
 
 //#region // Modul: Rechenarten auswählen | Test:
 
