@@ -1,0 +1,20 @@
+/***** Styles *****/
+
+button{
+    display: block;
+    width:85px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+body.day{
+    background-color: #eee;
+}
+
+h1.day{
+    color: #333;
+}
+
+p.day{
+    color: #000000;
+}
