@@ -12,7 +12,12 @@ let btn = document.getElementById("trigBtn");
 /***** STATUS *****/
 let status = true;
 
+
+/***** EVENT-Listener *****/
 btn.addEventListener("click",toggleStatus);
+
+/***** BUSINESS-LOGIC *****/
+// TOGGLE => most important
 
 function toggleStatus() {
     status = !status;
