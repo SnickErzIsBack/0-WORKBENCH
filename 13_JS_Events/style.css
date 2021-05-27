@@ -6,7 +6,7 @@ button{
     height: 35px;
     margin-top: 20px;
 }
-
+/***** Day-Mode *****/
 body.day{
     background-color: #eee;
 }
@@ -17,4 +17,17 @@ h1.day{
 
 p.day{
     color: #000000;
+}
+
+/***** Night-Mode *****/
+body.night{
+    background-color: #333;
+}
+
+h1.night{
+    color: #eee;
+}
+
+p.night{
+    color: #eee;
 }
