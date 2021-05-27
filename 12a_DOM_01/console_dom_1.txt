@@ -3,7 +3,7 @@
     Datei ist nicht mit dem HTML-Dokument verbunden
 */
 
-
+console.log(document);
 /* Webseite Ergänzen um 2. p + ul/li */
 /* p-Tags mit id ergänzen / ersterText / zweiterText */
 
