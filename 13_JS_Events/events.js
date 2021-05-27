@@ -7,13 +7,12 @@ function ausgabe(outputStr) {
 /***** BTN *****/
 let btn = document.getElementById("trigBtn");
 
-//ausgabe(btn);
-
 /***** STATUS *****/
 let status = true;
 
-
 /***** EVENT-Listener *****/
+window.addEventListener("load",toggleStatus);
+
 btn.addEventListener("click",toggleStatus);
 
 /***** BUSINESS-LOGIC *****/
@@ -21,26 +20,25 @@ btn.addEventListener("click",toggleStatus);
 
 function toggleStatus() {
     status = !status;
-    ausgabe(status);
+    updateView();
 }
-
 
 /***** Tools *****/
-function test() {
-    let cond = (document.body.className == "day");
-    if (cond) {
-        // night-mode
-        classNameSwitcher("night");
-        switchBtnTxt("night");
-    } else {
-        // day-mode
-        classNameSwitcher("day");
-        switchBtnTxt("day");       
-    }
-}
 
 /***** Änderung in der View-Schicht *****/
 
+//Umschaltung des gesamten View
+function updateView() {
+    if (status) {
+        // night-mode
+        classNameSwitcher("night");
+        switchBtnTxt("day");
+    } else {
+        // day-mode
+        classNameSwitcher("day");
+        switchBtnTxt("night");       
+    }
+}
 //Modul: Umschaltung Klasse | Test:
 
 //classNameSwitcher("night");
@@ -51,12 +49,8 @@ function classNameSwitcher(modestr) {
     document.body.children[0].className = modestr;
     document.body.children[1].className = modestr;
 }
-
-//Modul: Umschaltung BtnTxt | Test:
-
-//switchButtonTest("day");
-//switchButtonTest("night");
+//Umschaltung BtnTxt | Test
 
 function switchBtnTxt(modestr){
-    btn.innerHtml = modestr;
+    btn.innerHTML = modestr;
 }
