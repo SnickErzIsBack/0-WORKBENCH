@@ -44,7 +44,7 @@ function isInputValid() { // Frage: Is input valid?
 //Modul: Eingabe aus Formular --> Test:
 //getInput();
 function getInput() {
-    return parseInt(gui.dom.field.value); ;
+    return parseInt(gui.dom.field.value);
 }
 
 //Modul: Bilder austauschen --> Test:
@@ -79,7 +79,7 @@ function updateTxt(strArr) {
         str += strArr[i].toUpperCase();
         if (i<strArr.length - 1){str += ", ";}
     }
-    gui.dom.txt.innerText  = str; //--> DOM
+    gui.dom.txt.innerText = str; //--> DOM
     return "txt update OK!";
 }
 
